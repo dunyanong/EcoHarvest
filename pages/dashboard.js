@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
-import TopCards from '../components/TopCards';
-import BarChart from '../components/BarChart';
-import RecentOrders from '../components/RecentOrders';
+import TopCards from '../components/percentage';
 import Layout from '../components/Layout';
-import CropChart from '../components/CropChart';
 
 import { getDatabase, ref, child, get } from 'firebase/database';
 
+  // logic comment percentage = bin height - input height / bin height
 const Dashboard = () => {
   const [topCardsData, setTopCardsData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +39,7 @@ const Dashboard = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures this effect runs once when the component mounts
+  }, []);
 
   return (
     <Layout isWhiteBackground={true}>
@@ -53,11 +51,8 @@ const Dashboard = () => {
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {topCardsData && <TopCards data={topCardsData} />}
-        <div className="p-4 grid md:grid-cols-3 grid-cols-1 gap-4">
-          <BarChart />
-          <RecentOrders />
-        </div>
-        <CropChart />
+
+
       </main>
       <div className="flex flex-row items-center justify-between py-10">
         <a

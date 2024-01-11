@@ -17,12 +17,9 @@ export default function Home() {
             <Head>
             <title>EcoHarvest</title>
             </Head>            
-            <div>
+            <div className="mx-5">
                 <h1 className="text-slate-900 font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center">Scan, Dispose, and Benefit</h1>
-            </div>  
-
-            <div>
-                <p className="mt-6 text-base md:text-lg text-slate-600 text-center max-w-3xl mx-auto">The Smart Food Waste Bin that turns your recycling efforts into rewards!"</p>
+                <p className="mt-6 text-base md:text-lg text-slate-600 text-center max-w-xl mx-auto">The Smart Food Waste Bin that turns your recycling efforts into rewards!"</p>
             </div>               
             <Link href='/auth/Login' legacyBehavior>
                 <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
@@ -33,7 +30,7 @@ export default function Home() {
 
             <div className="mx-1">
             <div className="mx-auto grid justify-center gap-4 md:grid-cols-2 pt-20">
-              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow">
+              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow mx-7">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <span className="text-2xl md:text-4xl lg:text-6xl mb-2"><ImBin2 /></span>
                   <div className="space-y-2">
@@ -42,7 +39,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow">
+              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow mx-7">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <span className="text-2xl md:text-4xl lg:text-6xl mb-2"><FaQrcode /></span>
                   <div className="space-y-2">
@@ -51,7 +48,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow">
+              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow mx-7">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <span className="text-2xl md:text-4xl lg:text-6xl mb-2"><FaGift /></span>
                   <div className="space-y-2">
@@ -60,7 +57,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow">
+              <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow mx-7">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <span className="text-2xl md:text-4xl lg:text-6xl mb-2"><IoLeaf /></span>
                   <div className="space-y-2">

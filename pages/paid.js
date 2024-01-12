@@ -24,9 +24,12 @@ export default function Paid() {
           <div className='flex justify-center'>
             <Image src={Tick} width={30} />
           </div>
-          <h1 className="text-2xl font-semibold my-4">Payment Successful!</h1>
-          <p className="text-lg text-gray-700">
-            Thank you for your purchase of the Fertilisers for $50.99.
+          <h1 className="text-2xl font-semibold my-4">Redemption Successful!</h1>
+          <p className="text-sm text-gray-700">
+            A confirmation email will be sent to you shortly.
+          </p>
+          <p className="text-sm text-gray-700">
+            For any enquiries or further assistance, please contact ecoharvest@gmail.com
           </p>
           <button
             onClick={handleBack}

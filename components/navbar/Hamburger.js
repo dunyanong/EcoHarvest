@@ -18,7 +18,7 @@ export const MobileNav = ({ open, setOpen }) => {
       >
         <div className="flex flex-col justify-center items-center mt-28">
           <div className="py-4 hover:underline text-sm md:text-base font-semibold">
-            <Link href="/binpercenta" legacyBehavior>
+            <Link href="/binpercentages" legacyBehavior>
               <a onClick={handleLinkClick}>Home</a>
             </Link>
           </div>
@@ -39,16 +39,7 @@ export const MobileNav = ({ open, setOpen }) => {
                 </Link>              
               </div>
             )}
-          </div>
-          <div className="py-4 hover:underline text-sm md:text-base font-semibold">
-            {user && (
-              <div className="flex items-center gap-4">
-                <Link href="/pay" legacyBehavior>
-                  <a onClick={handleLinkClick}>Pay</a>
-                </Link>              
-              </div>
-            )}
-          </div>          
+          </div>    
         </div>
       </div>
     );

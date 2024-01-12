@@ -9,7 +9,7 @@ export default function Paid() {
   const router = useRouter();
 
   const handleBack = () => {
-    router.push('/dashboard')
+    router.push('/binpercentages')
   };
 
   return (

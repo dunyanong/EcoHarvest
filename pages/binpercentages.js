@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getDatabase, ref, child, get } from 'firebase/database';
 import Layout from '../components/Layout';
 import Percentages from '../components/capacityPercentage';
+import BinIcon from '../components/binIcon';
 
 const binpercentages = () => {
   const [topCardsData, setTopCardsData] = useState(null);
@@ -48,18 +49,20 @@ const binpercentages = () => {
         <div>
           {loading && <p>Loading...</p>}
           {error && <p>Error: {error}</p>}
-          <div className='pt-10'>
-            <h3 className="font-semibold tracking-tight text-base text-center">Bin Content</h3>
-            <p className="text-sm text-muted-foreground text-center">Let's see how much more can you fit!</p>            
+          <div className='pt-5'>
+            <h3 className="font-semibold tracking-tight text-2xl text-center">Bin Content</h3>
+            <p className="text-lg text-muted-foreground text-center">Let's see how much more can you fit!</p>            
           </div>
-
-          {topCardsData && <Percentages data={topCardsData} />}
+          <div className="flex flex-col items-center">
+            {topCardsData && <Percentages data={topCardsData} />}            
+            {topCardsData && <BinIcon data={topCardsData} />}
+          </div>
         </div>
       </main>
 
       {/* Move this section to the bottom */}
       <section className="flex flex-row items-center justify-between pb-10">
-        <Link href="/incomestatement" legacyBehavior>
+        <Link href="/creditsystem" legacyBehavior>
           <a className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 ml-auto">
             Credit
             <svg

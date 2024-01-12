@@ -32,7 +32,7 @@ const Navbar = () => {
                 )}
                 {user && (
                 <div className="hover:underline text-sm md:text-base font-semibold">
-                    <Link href="/binpercentages" legacyBehavior>
+                    <Link href="/" legacyBehavior>
                         <a>Home</a>
                     </Link>
                 </div> 

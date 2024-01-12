@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import bin0 from '../img/trash/bin0.jpg';
 import bin25 from '../img/trash/bin25.jpg';
@@ -12,24 +13,28 @@ const BinIcon = ({ data }) => {
         return ((binHeight - ultrasonicValue) / binHeight) * 100;
     };
 
-    const percentage = calculatePercentage(data.ultrasonicValue);
+    const [binImage, setBinImage] = useState(bin0);
 
-    let binImage;
-    if (percentage === 0) {
-        binImage = bin0;
-    } else if (percentage > 0 && percentage <= 40) {
-        binImage = bin25;
-    } else if (percentage > 40 && percentage <= 60) {
-        binImage = bin50;
-    } else if (percentage > 60 && percentage <= 90) {
-        binImage = bin75;
-    } else {
-        binImage = bin100;
-    }
+    useEffect(() => {
+        const ultrasonicValue = parseInt(data.ultrasonic.replace('cm', ''), 10);
+        const percentage = calculatePercentage(ultrasonicValue);
+
+        if (percentage === 0) {
+            setBinImage(bin0);
+        } else if (percentage > 0 && percentage <= 40) {
+            setBinImage(bin25);
+        } else if (percentage > 40 && percentage <= 60) {
+            setBinImage(bin50);
+        } else if (percentage > 60 && percentage <= 90) {
+            setBinImage(bin75);
+        } else if (percentage > 90){
+            setBinImage(bin100);
+        }
+    }, []);
 
     return (
-        <Image src={binImage} alt={`Bin ${percentage}% full`} width={300} height={300} />
+        <Image src={binImage} alt={`Bin ${binImage}% full`} width={300} height={300} />
     );
-}
- 
+};
+
 export default BinIcon;

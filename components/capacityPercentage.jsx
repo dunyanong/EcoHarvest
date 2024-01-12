@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Chart } from 'chart.js/auto';
 
 const calculatePercentage = (ultrasonicValue) => {
-  // 23cm
-  const binHeight = 23;
+  // 30cm
+  const binHeight = 30;
   return ((binHeight - ultrasonicValue) / binHeight) * 100;
 };
 

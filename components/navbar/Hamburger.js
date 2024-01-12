@@ -18,7 +18,7 @@ export const MobileNav = ({ open, setOpen }) => {
       >
         <div className="flex flex-col justify-center items-center mt-28">
           <div className="py-4 hover:underline text-sm md:text-base font-semibold">
-            <Link href="/binpercentages" legacyBehavior>
+            <Link href="/" legacyBehavior>
               <a onClick={handleLinkClick}>Home</a>
             </Link>
           </div>

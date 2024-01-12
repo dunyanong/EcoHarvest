@@ -17,7 +17,7 @@ const Navbar = () => {
               <Link legacyBehavior href="/binpercentages">
                 <Image src={Logo} width={20} alt="image"/>
               </Link>
-              <Link legacyBehavior href="/binpercentages">
+              <Link legacyBehavior href="/">
                 <a className="font-display text-2xl text-black tracking-tighter font-medium	">EcoHarvest</a>          
               </Link>
             </ul>

@@ -27,6 +27,12 @@ export default function Home() {
                     <p>Get Started</p>          
                 </button>            
             </Link>   
+            <Link href='/Profile/index' legacyBehavior>
+                <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
+                    <FaRecycle className="fill-current w-5 h-5" />    
+                    <p>Location</p>          
+                </button>            
+            </Link> 
 
             <div className="mx-1">
             <div className="mx-auto grid justify-center gap-4 md:grid-cols-2 pt-20">

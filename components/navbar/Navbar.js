@@ -14,10 +14,10 @@ const Navbar = () => {
         <div className="hidden items-center md:visible md:flex md:justify-between px-10 py-2">
         <div className="hover:cursor">
             <ul className="flex items-center gap-3">
-              <Link legacyBehavior href="/binpercentages">
+              <Link legacyBehavior href="/">
                 <Image src={Logo} width={20} alt="image"/>
               </Link>
-              <Link legacyBehavior href="/binpercentages">
+              <Link legacyBehavior href="/">
                 <a className="font-display text-2xl text-black tracking-tighter font-medium	">EcoHarvest</a>          
               </Link>
             </ul>

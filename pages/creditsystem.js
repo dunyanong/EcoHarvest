@@ -37,7 +37,7 @@ export default function CreditSystem() {
                     <h3 className="font-bold">NTUC Vouchers</h3>
                     <p className="text-sm text-gray-500">A $10 NTUC voucher that you can use for various purchases. This reward allows for unlimited redemptions.</p>
                     <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
-                        <a href="/paid"><p>100 PTS</p></a>
+                        <a href="/successful"><p>100 PTS</p></a>
                     </button>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ export default function CreditSystem() {
                     <h3 className="font-bold">5% Tax Reduction</h3>
                     <p className="text-sm text-gray-500">Enjoy a 5% reduction in your tax liability, providing you with financial relief.</p>
                     <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
-                        <a href="/paid"><p>1000 PTS</p></a>
+                        <a href="/successful"><p>1000 PTS</p></a>
                     </button>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function CreditSystem() {
                     <h3 className="font-bold">Government Business Support</h3>
                     <p className="text-sm text-gray-500">The government will support your business by purchasing a batch of vouchers from you and distributing them to citizens, providing exposure and potential new customers for your business.</p>
                     <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
-                        <a href="/paid"><p>5000 PTS</p></a>
+                        <a href="/successful"><p>5000 PTS</p></a>
                     </button>
                   </div>
                 </div>

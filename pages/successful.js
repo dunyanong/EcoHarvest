@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 import Tick from '../img/greentick.jpg';
 
-export default function Paid() {
+export default function Successful() {
   const router = useRouter();
 
   const handleBack = () => {
@@ -22,7 +22,7 @@ export default function Paid() {
       <div className="flex items-center justify-center h-screen">
         <div className="p-8 rounded-md text-center">
           <div className='flex justify-center'>
-            <Image src={Tick} width={30} />
+            <Image src={Tick} width={60} />
           </div>
           <h1 className="text-2xl font-semibold my-4">Redemption Successful!</h1>
           <p className="text-sm text-gray-700">

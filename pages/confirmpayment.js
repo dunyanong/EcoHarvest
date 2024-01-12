@@ -10,7 +10,7 @@ const ConfirmPayment = () => {
 
   // handle confirmation
   const handleConfirm = () => {
-    router.push('/paid');
+    router.push('/successful');
   };
 
   // handle cancellation

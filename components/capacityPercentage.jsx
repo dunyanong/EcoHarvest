@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Chart } from 'chart.js/auto';
 
 const calculatePercentage = (ultrasonicValue) => {
-  const binHeight = 3000;
+  // 23cm
+  const binHeight = 23;
   return ((binHeight - ultrasonicValue) / binHeight) * 100;
 };
 
@@ -14,9 +15,9 @@ const renderChartDetails = (ctx, percentage, centerX, centerY) => {
   ctx.textBaseline = 'middle';
   
   // Render the text containing the percentage
-  ctx.fillText(`${percentage.toFixed(0)}% filled`, centerX, centerY - 15);
+  ctx.fillText(`${percentage.toFixed(0)}%`, centerX, centerY - 15);
+  ctx.fillText(`filled`, centerX, centerY + 20);
 };
-
 
 const Percentage = ({ data }) => {
   const chartContainer = useRef(null);
@@ -49,9 +50,9 @@ const Percentage = ({ data }) => {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '80%', // Adjust the cutout based on your preference
+        cutout: '80%',
         legend: {
-          display: false, // Remove the legend
+          display: false, 
         },
         animation: {
           onComplete: (animation) => {
@@ -67,7 +68,7 @@ const Percentage = ({ data }) => {
   }, [data]);
 
   return (
-    <div style={{ maxWidth: '100%', margin: 'auto', overflow: 'hidden' }} className='pt-10'>
+    <div style={{ maxWidth: '50%', margin: 'auto', overflow: 'hidden' }} className=''>
       <canvas ref={chartContainer} />
     </div>
   );

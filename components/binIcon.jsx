@@ -8,8 +8,8 @@ import bin100 from '../img/trash/bin100.jpg';
 
 const BinIcon = ({ data }) => {
     const calculatePercentage = (ultrasonicValue) => {
-        // 23cm
-        const binHeight = 23;
+        // 30cm
+        const binHeight = 30;
         return ((binHeight - ultrasonicValue) / binHeight) * 100;
     };
 

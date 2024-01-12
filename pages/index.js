@@ -21,21 +21,24 @@ export default function Home() {
                 <h1 className="text-slate-900 font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center">Scan, Dispose, and Benefit</h1>
                 <p className="mt-6 text-base md:text-lg text-slate-600 text-center max-w-xl mx-auto">The Smart Food Waste Bin that turns your recycling efforts into rewards!"</p>
             </div>               
-            <Link href='/auth/Login' legacyBehavior>
-                <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
-                    <FaRecycle className="fill-current w-5 h-5" />    
-                    <p>Get Started</p>          
+            <div className="flex justify-center space-x-4 pt-5">
+              <Link href='/auth/Login' legacyBehavior>
+                <button className="group flex items-center rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black">
+                  <FaRecycle className="fill-current w-5 h-5" />    
+                  <p>Get Started</p>          
+                </button>              
+              </Link>   
+              <Link href='/location' legacyBehavior>
+                <button className="group flex items-center rounded-full border border-black bg-white px-5 py-2 text-sm text-black transition-colors hover:bg-black hover:text-white">
+                  <FaRecycle className="fill-current w-5 h-5" />    
+                  <p>Location</p>          
                 </button>            
-            </Link>   
-            <Link href='/Profile/index' legacyBehavior>
-                <button className="group mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black gap-1">
-                    <FaRecycle className="fill-current w-5 h-5" />    
-                    <p>Location</p>          
-                </button>            
-            </Link> 
+              </Link>
+            </div>
+
 
             <div className="mx-1">
-            <div className="mx-auto grid justify-center gap-4 md:grid-cols-2 pt-20">
+            <div className="mx-auto grid justify-center gap-4 md:grid-cols-2 pt-1 0">
               <div className="relative overflow-hidden rounded-lg border bg-white p-2 shadow mx-7">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <span className="text-2xl md:text-4xl lg:text-6xl mb-2"><ImBin2 /></span>
